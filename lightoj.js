@@ -1,9 +1,14 @@
 const getBrowser = require('./browser').getBrowser;
 const cheerio = require('cheerio');
+const Spinner = require('cli-spinner').Spinner;
 
 const submit = async(username, password, file, problemId) => {
     let browser;
+    let spinner;
     try {
+        spinner = new Spinner('processing.. %s');
+        spinner.setSpinnerString('|/-\\');
+        spinner.start();
         browser = await getBrowser();
         const page = await browser.newPage();
         await page.goto('http://lightoj.com/login_main.php');
@@ -23,12 +28,17 @@ const submit = async(username, password, file, problemId) => {
         return 'Fail';
     } finally {
         browser.close();
+        spinner.stop();
     }
 }
 
 const checkIfSolved = async(username, password, problemId) => {
     let browser;
+    let spinner;
     try {
+        spinner = new Spinner('processing.. %s');
+        spinner.setSpinnerString('|/-\\');
+        spinner.start();
         browser = await getBrowser();
         const page = await browser.newPage();
         await page.goto('http://lightoj.com/login_main.php');
@@ -57,6 +67,7 @@ const checkIfSolved = async(username, password, problemId) => {
         return 'Fail';
     } finally {
         browser.close();
+        spinner.stop();
     }
 }
 
