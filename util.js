@@ -1,5 +1,9 @@
 const fs = require('fs');
 
+const fileExists = (filePath) => {
+    return fs.existsSync(filePath);
+}
+
 const readContent = (filePath) => {
     return fs.readFileSync(filePath, 'utf-8');
 }
@@ -20,5 +24,6 @@ module.exports = {
     readContent,
     writeContent,
     isString,
-    flatten
+    flatten,
+    fileExists
 }

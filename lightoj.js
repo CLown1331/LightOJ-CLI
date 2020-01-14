@@ -61,7 +61,7 @@ const checkIfSolved = async(username, password, problemId) => {
 
         const isSolved = !!solved.find(id => id === problemId);
 
-        return `loj-${problemId}: ${isSolved}`;
+        return `\nloj-${problemId}: ${isSolved ? 'solved': 'not solved'}`;
     } catch(err) {
         console.error(err);
         return 'Fail';
