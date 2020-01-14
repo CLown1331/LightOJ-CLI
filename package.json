@@ -1,0 +1,19 @@
+{
+  "name": "lightoj-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CLown1331/LightOJ-CLI.git"
+  },
+  "author": "Araf Al-Jami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CLown1331/LightOJ-CLI/issues"
+  },
+  "homepage": "https://github.com/CLown1331/LightOJ-CLI#readme"
+}
