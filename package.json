@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/CLown1331/LightOJ-CLI/issues"
   },
-  "homepage": "https://github.com/CLown1331/LightOJ-CLI#readme"
+  "homepage": "https://github.com/CLown1331/LightOJ-CLI#readme",
+  "bin": {
+    "lightoj-cli": "index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^2.0.0",
+    "yargs": "^15.1.0"
+  }
 }
